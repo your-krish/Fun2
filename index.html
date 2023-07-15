@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hiiiiii</title>
+<style>
+p {
+    text-align: center;
+    font-size: 32px;
+    font-family: Candara, Oswald;
+}
+img {
+    display: block;
+    margin: 0 auto;
+    width: 25%;
+}
+#botao1 {
+    position: fixed;
+    top: 70%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+#botao2 {
+    position: absolute;
+    left: 39%;
+    top: 68%;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    img {
+        width: 50%;
+    }
+    #botao1,
+    #botao2 {
+        position: static;
+        display: block;
+        margin: 20px auto;
+    }
+}
+</style>
+</head>
+<body>
+<p>Hey, can I ask you a sweet question?</p>
+<img src="Media/How are you.gif" alt="How are you?">
+
+<button id="botao1">TOTALLY <br> FINE! :)</button>
+<button id="botao2">SAD</button>
+
+<script>
+const button2 = document.getElementById('botao2');
+let left = 40;
+button2.addEventListener('mouseover', function() {
+  if (left == 40) {
+    left = 44;
+  } else {
+    left = 40;
+  }
+  this.style.left = left + '%';
+});
+
+button2.addEventListener('click', function() {
+  alert('Aww, I hope things get better soon!');
+});
+
+document.getElementById('botao1').addEventListener('click', function() {
+  alert('OH THAT\'S SO NICE TO HEAR🤩');
+});
+</script>
+</body>
+</html>
